@@ -1,0 +1,533 @@
+:root {
+    --green-color: #78C376;
+    --golden-green: #C1A130;
+    --bg: #020101;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: "Sen", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    color: white;
+    transition: all ease 400ms;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6, h1 span, legend {
+    font-family: "Abril Fatface", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+a,
+a * {
+    text-decoration: none;
+    color: var(--green-color);
+}
+
+
+body {
+    background-color: var(--bg);
+}
+
+/* universal styles */
+
+.green-text {
+    color: var(--green-color);
+}
+
+
+@media (max-width: 768px) {
+
+    /* elements hidden in mobile */
+    .mb-hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* elements hidden in pc */
+    .pc-hidden {
+        display: none;
+    }
+}
+
+/* donate button and variants */
+
+.donate {
+    color: black;
+    background-color: white;
+    padding: 8px 24px;
+    border-radius: 24px;
+    border: 1px solid white;
+    display: block;
+    width: fit-content;
+}
+
+.donate:hover {
+    color: white;
+    background-color: transparent;
+}
+
+/* donate button and variants end */
+
+/* universal styles end */
+
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    background-color: var(--bg);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 99;
+}
+
+nav.scrolled{
+    box-shadow: 0px 0px 8px 4px #444444;
+    background-color: #191919;
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 8px 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    nav {
+        padding: 8px 2rem;
+    }
+}
+
+nav .brand img {
+    height: 36px;
+}
+
+nav .links {
+    display: grid;
+    width: 100%;
+    max-width: 500px;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: space-around;
+}
+
+nav .links li {
+    list-style-type: none;
+    margin: 4px 8px;
+    text-align: center;
+}
+
+nav .donate {
+    background-color: var(--golden-green);
+    border-color: var(--golden-green);
+    color: white;
+}
+
+header {
+    display: grid;
+    gap: 24px;
+    min-height: 100vh;
+}
+
+@media (max-width: 768px){
+    header{
+        padding-top:80px;
+        margin: 8px 1rem;
+        gap: 32px;
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        grid-template-columns: 1fr 1fr;
+        margin: 8px 2rem;
+    }
+}
+
+header .header-left,
+header .header-right {
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+@media (min-width: 768px) {
+    .header-left .content {
+        max-width: 400px;
+        margin: 0px auto;
+    }
+}
+
+.header-left .content {
+    display: grid;
+    gap: 16px;
+}
+
+.header-left .content h1{
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right .img{
+    position: relative;
+}
+
+.header-right .img .desc{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 16px 32px;
+}
+
+header .header-right .img .desc p{
+    color: white;
+    text-align: center;
+}
+
+header .header-right .img img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+@media (max-width: 768px){
+    main{
+        margin: 16px 1rem;
+    }
+}
+
+@media (min-width: 768px){
+    main{
+        margin: 20px 2rem;
+    }
+}
+
+section#get-involved h1, section#news h1, section#hiw h1{
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom: 24px;
+}
+
+section#gallery{
+    display: grid;
+    max-width: 100%;
+    gap: 32px;
+}
+
+@media (min-width: 768px) and (max-width: 912px){
+    section#gallery{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 912px){
+    section#gallery{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+div.place-card{
+    width: 100%;
+    min-width: 300px;
+    height: 100%;
+}
+article.place-card{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    height: 100%;
+    background-color: #191919;
+    padding-bottom: 8px;
+    border-radius: 8px;
+    position: relative;
+    justify-content: space-between;
+}
+
+article.place-card .img img{
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 8px 8px 0px 0px;
+}
+
+article.place-card .content, article.place-card .btn-container{
+    padding: 4px 8px;
+}
+
+.place-card .read-more{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 4px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+article.place-card .content h4{
+    font-size: 20px;
+    padding-bottom: 8px;
+    color: var(--green-color);
+}
+
+article.place-card .content h4 i{
+    color: var(--golden-green);
+}
+
+article.place-card .content p{
+    color: #8f8f8f;
+}
+
+article.place-card .btn-container{
+    width: 100%;
+}
+
+article.place-card .btn-container a.donate{
+    background-color: var(--green-color);
+    border-color: var(--green-color);
+    margin: 2px auto;
+}
+
+article.place-card .btn-container a.donate:hover{
+    background-color: transparent;
+    color: var(--green-color);
+}
+
+section#news{
+    margin: 40px auto;
+}
+
+section#news-container{
+    margin: 16px;
+    display: grid;
+    background-color: rgb(66, 66, 66);
+    gap: 1px;
+    border: .5px solid rgb(66, 66, 66);
+    border-radius: 8px;
+}
+
+@media (min-width: 912px){
+    section#news-container{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+section#news-container article.news-card{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px;
+    padding: 8px;
+    background-color: var(--bg);
+    border-radius: 8px;
+}
+
+section#news-container article.news-card .img-container img{
+    width: 300px;
+    max-width: 30vw;
+    aspect-ratio: 16/11;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 8px;
+}
+
+@media (max-width: 768px){
+
+    section#news-container article.news-card{
+        grid-template-columns: unset;
+    }
+
+    section#news-container article.news-card .img-container img{
+        width: 100%;
+        max-width: unset;
+        aspect-ratio: 16/9;
+    }
+    
+}
+
+section#news-container article.news-card .info{
+    display: grid;
+    gap: 8px;
+}
+
+section#news-container article.news-card .info h4{
+    font-size: 16px;
+    color: var(--golden-green);
+}
+
+section#news-container article.news-card .info p.short-desc{
+    font-size: small;
+    font-style: italic;
+    color: gray;
+}
+
+section#news-container article.news-card .info p.long-desc{
+    color: rgb(171, 171, 171);
+}
+
+section#news-container article.news-card .info p.long-desc span {
+    color: rgb(205, 205, 205);
+}
+
+
+section#hiw{
+    margin: 40px auto;
+}
+
+#hiw-content{
+    display: grid;
+    gap: 1px;
+    background-color: #6d5600;
+    max-width: 80vw;
+    margin: 10px auto;
+}
+
+#hiw-content article.hiw{
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 16px;
+    padding: 16px 0px;
+    background-color: var(--bg);
+}
+
+#hiw-content article.hiw .img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hiw-content article.hiw .img img{
+    width: 75px;
+    object-fit: contain;
+}
+
+article.hiw h4{
+    color: var(--green-color);
+    font-size: 20px;
+    padding-bottom: 8px;
+}
+
+article.hiw p{
+    color: #aeaeae;
+}
+
+
+#feedback form{
+    width: 400px;
+    max-width: 90vw;
+    margin: 16px auto;
+}
+
+form fieldset{
+    padding: 16px;
+    border-radius: 4px;
+    border: 1px solid gray;
+}
+
+legend{
+    font-size: 20px;
+    padding: 0px 8px;
+}
+
+#feedback form fieldset p{
+    padding-bottom: 16px;
+    font-style: italic;
+    color: gray;
+}
+
+#feedback form .content{
+    display: grid;
+    gap: 16px;
+}
+
+#feedback form .input{
+    display: grid;
+    gap: 4px;
+}
+
+#feedback form .input input{
+    background-color: transparent;
+    padding: 4px 0;
+    border: none;
+    border-bottom: 1px solid gray;
+    color: #8f8f8f;
+}
+
+#feedback form .input textarea{
+    background-color: transparent;
+    padding: 4px;
+    resize: none;
+    color: #8f8f8f;
+}
+
+#feedback form .submit-btn{
+    margin-top: 16px;
+}
+
+#feedback form .submit-btn button{
+    display: block;
+    width: 200px;
+    max-width: 80%;
+    padding: 8px 0;
+    border-radius: 24px;
+    color: black;
+    border: 1px solid rgb(240, 240, 240);
+    background-color: rgb(240, 240, 240);
+    margin: 4px auto;
+}
+
+footer{
+    width: 100%;
+    margin: 32px auto;
+}
+
+footer *{
+    font-size: small;
+}
+
+footer ul{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer li{
+    list-style-type: none;
+}
+
+footer li .brand{
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 8px;
+    align-items: center;
+}
+
+footer li .brand img{
+    width:  32px;
+}
