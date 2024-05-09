@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <%- include("fragments/fonts") %>
+        <link rel="stylesheet" href="/styles/index.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <script src="/scripts/index.js" defer></script>
+</head>
+
+<body>
+    <%- include('fragments/nav') %>
+    <header>
+        <div class="header-left">
+            <div class="content">
+                <h1>Floods Victims</h1>
+                <h1>in <span id="current-country" class="green-text">UAE</span></h1>
+                <h1>Need Help</h1>
+
+                <p>We are responding with emergency assistance where needed and supporting families who have lost their homes due to the floods catastrophe.</p>
+                <div>
+                    <a href="/donate" class="donate">Donate</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-right">
+            <div class="img">
+                <img src="/images/dubai_floods_1.jpg" id="floods-img" alt="floods in kenya">
+                <div class="desc">
+                    <p id="floods-description">Floods sweeps a street in <span class="green-text">Dubai, UAE</span></p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="get-involved">
+            <h1>The World Needs Your Help!</h1>
+            <section id="gallery">
+                <div class="place-card">
+                    <article class="place-card">
+                        <div class="img"><img src="/images/indonesia_floods_4.webp" alt="">
+                        </div>
+                        <div class="content">
+                            <h4><i class="fas fa-location-dot"></i> Indonesia</h4>
+                            <p>Indonesia Floods, Landslide Kill 19, With Seven Missing</p>
+                        </div>
+                        <div class="btn-container">
+                            <a class="donate" href="/donate" >Make Donation</a>
+                            
+                        </div>
+                        <div class="read-more">
+                            <a href="https://www.citizen.digital/news/indonesia-floods-landslide-kill-19-with-seven-missing-n338194" class="learn-more" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="place-card">
+                    <article class="place-card">
+                        <div class="img"><img src="/images/brazil_floods_1.avif" alt=""></div>
+                        <div class="content">
+                            <h4><i class="fas fa-location-dot"></i> Brazil</h4>
+                            <p>Rio Grande do Sul, Brazil: 37 killed and dozens missing in worst floods in 80 years</p>
+                        </div>
+                        <div class="btn-container">
+                            <a class="donate" href="/donate" >Make Donation</a>
+                            
+                        </div>
+                        <div class="read-more">
+                            <a href="https://www.theguardian.com/world/article/2024/may/03/brazil-floods-rio-grande-do-sul" class="learn-more" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+                </div>                
+                <div class="place-card">
+                    <article class="place-card">
+                        <div class="img"><img src="/images/kenya_floods_4.jpg" alt=""></div>
+                        <div class="content">
+                            <h4><i class="fas fa-location-dot"></i> Kenya</h4>
+                            <p>Kenya flooding: Around 50 killed in villages near Mai Mahiu town</p>
+                        </div>
+                        <div class="btn-container">
+                            <a class="donate" href="/donate" >Make Donation</a>
+                        </div>
+                        <div class="read-more">
+                            <a href="https://www.bbc.com/news/world-africa-68896456" class="learn-more" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="place-card">
+                    <article class="place-card">
+                        <div class="img"><img src="/images/uk_floods_4.jpg" alt=""></div>
+                        <div class="content">
+                            <h4><i class="fas fa-location-dot"></i> United Kingdom</h4>
+                            <p>London: Around 50 people were evacuated from rising waters. Heavy rain brought similar scenes to parts of France and Germany.</p>
+                        </div>
+                        <div class="btn-container">
+                            <a class="donate" href="/donate" >Make Donation</a>
+                            
+                        </div>
+                        <div class="read-more">
+                            <a href="https://www.nytimes.com/2024/01/05/world/europe/uk-flooding.html" class="learn-more" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="place-card">
+                    <article class="place-card">
+                        <div class="img"><img src="/images/dubai_floods_4.webp" alt=""></div>
+                        <div class="content">
+                            <h4><i class="fas fa-location-dot"></i> Dubai, UAE</h4>
+                            <p>Dubai Faces Persistent Flooding Due To Lack Of Storm Drains</p>
+                        </div>
+                        <div class="btn-container">
+                            <a class="donate" href="/donate" >Make Donation</a>
+                           
+                        </div>
+                        <div class="read-more">
+                            <a href="https://www.ndtv.com/world-news/dubai-faces-persistent-flooding-due-to-lack-of-storm-drains-5479631" class="learn-more" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+                </div>
+                <div class="place-card">
+                    <article class="place-card">
+                        <div class="img"><img src="/images/india_floods_1.png" alt=""></div>
+                        <div class="content">
+                            <h4><i class="fas fa-location-dot"></i> India</h4>
+                            <p>Chennai floods: Is there a way out of the crisis?</p>
+                        </div>
+                        <div class="btn-container">
+                            <a class="donate" href="/donate" >Make Donation</a>
+                            
+                        </div>
+                        <div class="read-more">
+                            <a href="https://www.hindustantimes.com/india-news/chennai-floods-is-there-a-way-out-of-the-crisis-101702325455310.html" class="learn-more" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        </div>
+                    </article>
+                </div>
+                
+            </section>
+        </section>
+        <section id="news">
+            <h1>News & Stories From The Internet</h1>
+            <section id="news-container">
+                <h3>Loading news from the internet... </h3>
+            </section>
+        </section>
+        <section id="hiw">
+            <h1>How we work</h1>
+            <section id="hiw-content">
+                <article class="hiw">
+                    <div class="img"><img src="/icons/assessment.png" alt=""></div>
+                    <div class="content">
+                        <h4>Needs Assessment</h4>
+                        <p >Before taking action, we conduct thorough assessments to understand the specific needs of affected communities. Through on-the-ground surveys, consultations with local authorities, and data analysis, we gather vital information to inform our response efforts.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/emergency.png" alt=""></div>
+                    <div class="content">
+                        <h4>Emergency Response</h4>
+                        <p>In the immediate aftermath of a flood crisis, we swiftly mobilize to provide life-saving aid. This includes distributing emergency supplies such as food, clean water, shelter materials, and medical assistance to those in need. Our teams work tirelessly to reach the most vulnerable populations and ensure no one is left behind.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/long-term.png" alt=""></div>
+                    <div class="content">
+                        <h4>Long-Term Recovery</h4>
+                        <p >Recognizing the lasting impact of floods on communities, we remain committed to supporting long-term recovery efforts. This involves rebuilding infrastructure, restoring livelihoods, providing psychosocial support, and implementing disaster risk reduction measures to enhance resilience against future disasters.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/accountability.png" alt=""></div>
+                    <div class="content">
+                        <h4>Transparency and Accountability</h4>
+                        <p >Transparency is at the core of our operations. We uphold the highest standards of accountability, providing regular updates, financial reports, and impact assessments to our donors and stakeholders. We believe in building trust through openness and honesty in all our dealings.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/collaboration.png" alt=""></div>
+                    <div class="content">
+                        <h4>Collaboration</h4>
+                        <p >We understand the importance of collaboration in achieving meaningful impact. We forge partnerships with local organizations, governments, and other stakeholders to leverage resources, share expertise, and coordinate efforts effectively. Together, we amplify our collective impact and maximize support for flood-affected communities.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/volunteer.png" alt=""></div>
+                    <div class="content">
+                        <h4>Volunteer Engagement</h4>
+                        <p >We welcome volunteers who share our passion for making a difference. Whether it's lending a helping hand in distribution efforts, providing specialized skills, or raising awareness about the flood crisis, there are various ways for individuals to get involved and contribute to our cause.</p>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <section id="feedback">
+            <form action="feedback" method="post">
+                <fieldset>
+                    <legend>Feedback</legend>
+                    <p>Leave us a message</p>
+                    <div class="content">
+                        <div class="input">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" required autocomplete="additional-name">
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required autocomplete="email">
+                        </div>
+                        <div class="input">
+                            <label for="message">Your message</label>
+                            <textarea name="message" rows="10" placeholder="Your message here..." id="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="submit-btn">
+                        <button>Send</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <%- include('fragments/footer') %>
+</body>
+
+</html>
