@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <%- include("fragments/fonts") %>
+        <link rel="stylesheet" href="/styles/index.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <%- include('fragments/nav') %>
+    <main>
+        <section id="hiw">
+            <h1>Our Environmental Conservation Efforts</h1>
+            <p></p>
+            <section id="hiw-content">
+                <article class="hiw">
+                    <div class="img"><img src="/icons/accountability.png" alt=""></div>
+                    <div class="content">
+                        <h4>Advocacy and Awareness</h4>
+                        <p >We actively advocate for policies and initiatives that address the root causes of climate change. Through awareness campaigns, education programs, and community outreach, we strive to increase public understanding of the urgent need for climate action. By empowering individuals to make informed choices and engage in advocacy efforts, we work towards fostering a collective commitment to combatting climate change at all levels.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/collaboration.png" alt=""></div>
+                    <div class="content">
+                        <h4>Sustainable Practices</h4>
+                        <p >As part of our commitment to environmental stewardship, we promote sustainable practices that reduce carbon emissions and mitigate the impacts of climate change. This includes initiatives to promote renewable energy, reduce waste and pollution, and promote sustainable agriculture and land use practices. By implementing these solutions in our own operations and advocating for their adoption on a broader scale, we demonstrate the feasibility and benefits of transitioning to a low-carbon, resilient future.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/volunteer.png" alt=""></div>
+                    <div class="content">
+                        <h4>Partnerships and Collaboration</h4>
+                        <p >We recognize that addressing the complex challenges of climate change requires collaboration and collective action. That's why we actively seek partnerships with governments, businesses, NGOs, and communities to develop innovative solutions and mobilize resources for climate resilience and adaptation. By working together across sectors and disciplines, we can leverage our collective strengths to accelerate progress towards a sustainable, climate-resilient future for all.</p>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <section id="hiw">
+            <h1>How we work</h1>
+            <section id="hiw-content">
+                <article class="hiw">
+                    <div class="img"><img src="/icons/assessment.png" alt=""></div>
+                    <div class="content">
+                        <h4>Needs Assessment</h4>
+                        <p >Before taking action, we conduct thorough assessments to understand the specific needs of affected communities. Through on-the-ground surveys, consultations with local authorities, and data analysis, we gather vital information to inform our response efforts.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/emergency.png" alt=""></div>
+                    <div class="content">
+                        <h4>Emergency Response</h4>
+                        <p>In the immediate aftermath of a flood crisis, we swiftly mobilize to provide life-saving aid. This includes distributing emergency supplies such as food, clean water, shelter materials, and medical assistance to those in need. Our teams work tirelessly to reach the most vulnerable populations and ensure no one is left behind.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/long-term.png" alt=""></div>
+                    <div class="content">
+                        <h4>Long-Term Recovery</h4>
+                        <p >Recognizing the lasting impact of floods on communities, we remain committed to supporting long-term recovery efforts. This involves rebuilding infrastructure, restoring livelihoods, providing psychosocial support, and implementing disaster risk reduction measures to enhance resilience against future disasters.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/accountability.png" alt=""></div>
+                    <div class="content">
+                        <h4>Transparency and Accountability</h4>
+                        <p >Transparency is at the core of our operations. We uphold the highest standards of accountability, providing regular updates, financial reports, and impact assessments to our donors and stakeholders. We believe in building trust through openness and honesty in all our dealings.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/collaboration.png" alt=""></div>
+                    <div class="content">
+                        <h4>Collaboration</h4>
+                        <p >We understand the importance of collaboration in achieving meaningful impact. We forge partnerships with local organizations, governments, and other stakeholders to leverage resources, share expertise, and coordinate efforts effectively. Together, we amplify our collective impact and maximize support for flood-affected communities.</p>
+                    </div>
+                </article>
+                <article class="hiw">
+                    <div class="img"><img src="/icons/volunteer.png" alt=""></div>
+                    <div class="content">
+                        <h4>Volunteer Engagement</h4>
+                        <p >We welcome volunteers who share our passion for making a difference. Whether it's lending a helping hand in distribution efforts, providing specialized skills, or raising awareness about the flood crisis, there are various ways for individuals to get involved and contribute to our cause.</p>
+                    </div>
+                </article>
+            </section>
+        </section>
+        <section id="feedback">
+            <form action="feedback" method="post">
+                <fieldset>
+                    <legend>Feedback</legend>
+                    <p>Leave us a message</p>
+                    <div class="content">
+                        <div class="input">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" required autocomplete="additional-name">
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required autocomplete="email">
+                        </div>
+                        <div class="input">
+                            <label for="message">Your message</label>
+                            <textarea name="message" rows="10" placeholder="Your message here..." id="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="submit-btn">
+                        <button>Send</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <%- include('fragments/footer') %>
+</body>
+<style>
+    main{
+        margin-top: 100px;
+    }
+
+    #about h1{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    #about p{
+        padding: 8px;
+        color: rgb(173, 173, 173);
+    }
+
+    @media (min-width: 768px){
+        #about{
+            width: 80vw;
+            margin: 24px auto;
+        }
+    }
+</style>
+<script>
+    // navbar scroll
+(() => {
+    const nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', (e) => {
+        if (scrollY > 50) {
+            nav.classList.add("scrolled")
+        } else {
+            nav.classList.remove('scrolled')
+        }
+    })
+})();
+</script>
+
+</html>
