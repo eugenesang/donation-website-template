@@ -1,0 +1,17 @@
+{
+  "name": "floods-donors-book",
+  "version": "1.0.0",
+  "description": "Floods donors book - charity donations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file=.env index.js",
+    "dev": "nodemon --env-file=.env index.js"
+  },
+  "author": "Crafty Designer",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2"
+  }
+}
