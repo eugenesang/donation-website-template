@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <%- include("fragments/fonts") %>
+        <link rel="stylesheet" href="/styles/index.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <%- include('fragments/nav') %>
+    <main>
+        <section id="news">
+            <h1>News & Stories From The Internet</h1>
+            <section id="news-container">
+                <h3>Loading news from the internet... </h3>
+            </section>
+        </section>
+        <section id="feedback">
+            <form action="feedback" method="post">
+                <fieldset>
+                    <legend>Feedback</legend>
+                    <p>Leave us a message</p>
+                    <div class="content">
+                        <div class="input">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" required autocomplete="additional-name">
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required autocomplete="email">
+                        </div>
+                        <div class="input">
+                            <label for="message">Your message</label>
+                            <textarea name="message" rows="10" placeholder="Your message here..." id="message"></textarea>
+                        </div>
+                    </div>
+                    <div class="submit-btn">
+                        <button>Send</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <%- include('fragments/footer') %>
+</body>
+<style>
+    main{
+        margin-top: 100px;
+    }
+</style>
+<script>
+     // navbar scroll
+(() => {
+    const nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', (e) => {
+        if (scrollY > 50) {
+            nav.classList.add("scrolled")
+        } else {
+            nav.classList.remove('scrolled')
+        }
+    })
+})();
+
+    // collect news 
+(async () => {
+    const res = await fetch(`https://api.wikimedia.org/core/v1/wikipedia/en/search/page?q=Floods disaster ${new Date().getFullYear()}&limit=50&language=en`);
+    const news = await res.json();
+
+    function editUrl(img) {
+        const pieces = img.split("/");
+
+        let imgData = pieces.pop();
+
+        let [a, b] = imgData.split('px');
+
+        a = 300;
+
+        imgData = [a, b].join('px');
+        return [...pieces, imgData].join("/");
+    }
+
+    function createNewsCard(title, description, excerpt, id, thumbnail, key) {
+        const imgUrl = editUrl(thumbnail?.url);
+
+        // Create article element
+        const article = document.createElement("article");
+        article.classList.add("news-card");
+
+        // Create img-container div
+        const imgContainer = document.createElement("div");
+        imgContainer.classList.add("img-container");
+        const img = document.createElement("img");
+        img.src = imgUrl;
+        imgContainer.appendChild(img);
+        article.appendChild(imgContainer);
+
+        // Create info div
+        const info = document.createElement("div");
+        info.classList.add("info");
+        const titlePara = document.createElement("h4");
+        titlePara.classList.add("title");
+        titlePara.textContent = title;
+        info.appendChild(titlePara);
+        const shortDesc = document.createElement("p");
+        shortDesc.classList.add("short-desc");
+        shortDesc.textContent = description;
+        if(description){
+            info.appendChild(shortDesc);
+        }
+        const longDesc = document.createElement("p");
+        longDesc.classList.add("long-desc");
+        longDesc.innerHTML = excerpt;
+        info.appendChild(longDesc);
+
+        // Create read-more-container div
+        const readMoreContainer = document.createElement("div");
+        readMoreContainer.classList.add("read-more-container");
+        const readMoreLink = document.createElement("a");
+        readMoreLink.href = `/news/id/${id}/${key}`;
+        readMoreLink.classList.add("read-more");
+        readMoreLink.textContent = "Read more";
+        readMoreContainer.appendChild(readMoreLink);
+        info.appendChild(readMoreContainer);
+
+        article.appendChild(info);
+
+
+        return article;
+    }
+
+    const container = document.getElementById("news-container");
+    container.innerHTML = '';
+
+    for(let {title, description, excerpt, id, thumbnail, key} of news.pages.filter(n=>n.thumbnail)){
+        const newsCard = createNewsCard(title, description, excerpt, id, thumbnail, key);
+        
+        container.append(newsCard);
+    }
+})();
+
+</script>
+
+</html>
