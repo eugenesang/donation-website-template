@@ -2,9 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <%- include('fragments/seo') %>
+    <title>Floods Donors Book</title>
     <%- include("fragments/fonts") %>
         <link rel="stylesheet" href="/styles/index.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -48,7 +47,7 @@
                             <p>Indonesia Floods, Landslide Kill 19, With Seven Missing</p>
                         </div>
                         <div class="btn-container">
-                            <a class="donate" href="/donate" >Make Donation</a>
+                            <a class="donate" href="/donate/indonesia" >Make Donation</a>
                             
                         </div>
                         <div class="read-more">
@@ -64,7 +63,7 @@
                             <p>Rio Grande do Sul, Brazil: 37 killed and dozens missing in worst floods in 80 years</p>
                         </div>
                         <div class="btn-container">
-                            <a class="donate" href="/donate" >Make Donation</a>
+                            <a class="donate" href="/donate/brazil" >Make Donation</a>
                             
                         </div>
                         <div class="read-more">
@@ -80,7 +79,7 @@
                             <p>Kenya flooding: Around 50 killed in villages near Mai Mahiu town</p>
                         </div>
                         <div class="btn-container">
-                            <a class="donate" href="/donate" >Make Donation</a>
+                            <a class="donate" href="/donate/kenya" >Make Donation</a>
                         </div>
                         <div class="read-more">
                             <a href="https://www.bbc.com/news/world-africa-68896456" class="learn-more" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
@@ -96,7 +95,7 @@
                             <p>London: Around 50 people were evacuated from rising waters. Heavy rain brought similar scenes to parts of France and Germany.</p>
                         </div>
                         <div class="btn-container">
-                            <a class="donate" href="/donate" >Make Donation</a>
+                            <a class="donate" href="/donate/any" >Make Donation</a>
                             
                         </div>
                         <div class="read-more">
@@ -113,7 +112,7 @@
                             <p>Dubai Faces Persistent Flooding Due To Lack Of Storm Drains</p>
                         </div>
                         <div class="btn-container">
-                            <a class="donate" href="/donate" >Make Donation</a>
+                            <a class="donate" href="/donate/uae" >Make Donation</a>
                            
                         </div>
                         <div class="read-more">
@@ -129,7 +128,7 @@
                             <p>Chennai floods: Is there a way out of the crisis?</p>
                         </div>
                         <div class="btn-container">
-                            <a class="donate" href="/donate" >Make Donation</a>
+                            <a class="donate" href="/donate/any" >Make Donation</a>
                             
                         </div>
                         <div class="read-more">
@@ -192,31 +191,6 @@
                     </div>
                 </article>
             </section>
-        </section>
-        <section id="feedback">
-            <form action="feedback" method="post">
-                <fieldset>
-                    <legend>Feedback</legend>
-                    <p>Leave us a message</p>
-                    <div class="content">
-                        <div class="input">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" required autocomplete="additional-name">
-                        </div>
-                        <div class="input">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required autocomplete="email">
-                        </div>
-                        <div class="input">
-                            <label for="message">Your message</label>
-                            <textarea name="message" rows="10" placeholder="Your message here..." id="message"></textarea>
-                        </div>
-                    </div>
-                    <div class="submit-btn">
-                        <button>Send</button>
-                    </div>
-                </fieldset>
-            </form>
         </section>
     </main>
     <%- include('fragments/footer') %>
