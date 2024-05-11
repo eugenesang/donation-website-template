@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('fragments/seo') %>
+    <title>Thanks from Floods Donors Book</title>
+    <%- include("fragments/fonts") %>
+        <link rel="stylesheet" href="/styles/index.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <%- include('fragments/nav') %>
+    <main>        
+        <section class="success">
+            <h1>Hooray!</h1>
+            <section class="success-message">
+                <div>
+                    <img src="/icons/success.svg" alt="">
+                </div>
+                <div>
+                    <p>
+                        Your compassion amidst the floods is a beacon of hope for those affected. Thank you for your generous donation, which provides critical aid and support to communities in need. With your help, we can alleviate suffering, rebuild lives, and restore hope in the wake of this disaster. Together, we are a lifeline for those facing the challenges of flooding, offering strength and solidarity during their time of greatest need. Your contribution makes a tangible difference, offering light in the midst of darkness. Thank you for your kindness and unwavering support.
+                    </p>
+                    <h2>Thank You!</h2>
+                </div>
+            </section>
+        </section>
+    </main>
+    <%- include('fragments/footer') %>
+</body>
+<style>
+    main{
+        margin-top: 100px;
+    }
+    h1{
+        font-size: 3.5rem;
+    }
+    p{
+        padding: 16px;
+        line-height: 150%;
+        color: rgb(182, 182, 182);
+    }
+    h2{
+        padding: 32px;
+    }
+    section.success{
+        text-align: center;
+    }
+    section.success img{
+        max-width: 50vw;
+        max-width: 50vh;
+    }
+</style>
+<script>
+    // navbar scroll
+(() => {
+    const nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', (e) => {
+        if (scrollY > 50) {
+            nav.classList.add("scrolled")
+        } else {
+            nav.classList.remove('scrolled')
+        }
+    })
+})();
+</script>
+
+</html>
