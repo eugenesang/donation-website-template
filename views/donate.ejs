@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('fragments/seo') %>
+    <title>Donate | Floods Donors Book</title>
+    <%- include("fragments/fonts") %>
+        <link rel="stylesheet" href="/styles/index.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <%- include('fragments/nav') %>
+    <main>
+        <section class="submit">
+            <h1>Select who to donate to</h1>
+            <div class="option">
+                <article><a href="/donate/any">Any location</a></article>
+                <article><a href="/donate/uae">UAE & Dubai</a></article>
+                <article><a href="/donate/africa">Africa</a></article>
+                <article><a href="/donate/kenya">Kenya</a></article>
+                <article><a href="/donate/brazil">Brazil</a></article>
+                <article><a href="/donate/indonesia">Indonesia</a></article>
+            </div>
+        </section>
+    </main>
+    <%- include('fragments/footer') %>
+</body>
+<style>
+    main{
+        margin-top: 100px;
+    }
+
+    
+</style>
+<script>
+    // navbar scroll
+(() => {
+    const nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', (e) => {
+        if (scrollY > 50) {
+            nav.classList.add("scrolled")
+        } else {
+            nav.classList.remove('scrolled')
+        }
+    })
+})();
+</script>
+
+</html>
