@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('fragments/seo') %>
+    <title>Feedback | Floods Donors Book</title>
+    <%- include("fragments/fonts") %>
+        <link rel="stylesheet" href="/styles/index.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <%- include('fragments/nav') %>
+    <main>        
+        <section id="feedback">
+            <form action="feedback" method="post">
+                <fieldset>
+                    <legend>Feedback</legend>
+                    <p>Leave us a message</p>
+                    <div class="content">
+                        <div class="input">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" required autocomplete="additional-name">
+                        </div>
+                        <div class="input">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" id="email" required autocomplete="email">
+                        </div>
+                        <div class="input">
+                            <label for="message">Your message</label>
+                            <textarea name="message" rows="10" placeholder="Your message here..." id="message"></textarea>
+                        </div>
+                    </div>
+                    <div>
+                        <a href="mailto:help@floodsdonorsbook.life">Send us an email</a>
+                    </div>
+                    <div class="submit-btn">
+                        <button>Send</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <%- include('fragments/footer') %>
+</body>
+<style>
+    main{
+        margin-top: 100px;
+    }
+
+    #about h1{
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    #about p{
+        padding: 8px;
+        color: rgb(173, 173, 173);
+    }
+
+    @media (min-width: 768px){
+        #about{
+            width: 80vw;
+            margin: 24px auto;
+        }
+    }
+</style>
+<script>
+    // navbar scroll
+(() => {
+    const nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', (e) => {
+        if (scrollY > 50) {
+            nav.classList.add("scrolled")
+        } else {
+            nav.classList.remove('scrolled')
+        }
+    })
+})();
+</script>
+
+</html>
