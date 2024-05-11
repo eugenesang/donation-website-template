@@ -2,9 +2,8 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <%- include('fragments/seo') %>
+    <title>How we help | Floods Donors Book</title>
     <%- include("fragments/fonts") %>
         <link rel="stylesheet" href="/styles/index.css">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -86,31 +85,6 @@
                     </div>
                 </article>
             </section>
-        </section>
-        <section id="feedback">
-            <form action="feedback" method="post">
-                <fieldset>
-                    <legend>Feedback</legend>
-                    <p>Leave us a message</p>
-                    <div class="content">
-                        <div class="input">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" required autocomplete="additional-name">
-                        </div>
-                        <div class="input">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required autocomplete="email">
-                        </div>
-                        <div class="input">
-                            <label for="message">Your message</label>
-                            <textarea name="message" rows="10" placeholder="Your message here..." id="message"></textarea>
-                        </div>
-                    </div>
-                    <div class="submit-btn">
-                        <button>Send</button>
-                    </div>
-                </fieldset>
-            </form>
         </section>
     </main>
     <%- include('fragments/footer') %>
