@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('fragments/seo') %>
+    <title> <%= title %> | Floods Donors Book News</title>
+    <%- include("fragments/fonts") %>
+        <link rel="stylesheet" href="/styles/index.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <%- include('fragments/nav') %>
+    <main>
+        <section id="news">
+            <h1><%= title %></h1>
+            <div class="news-content">
+                <%- content %>
+            </div>
+        </section>
+    </main>
+    <%- include('fragments/footer') %>
+</body>
+<style>
+    main{
+        margin-top: 100px;
+    }
+
+    .news-content{
+        width: fit-content;
+        max-width: 90vw;
+        margin: 16px auto;
+    }
+
+    .news-content *{
+        font-family: quicksand;
+        font-size: 16px;
+        max-width: 90ch;
+        line-height: 150%;
+    }
+
+    .news-content span{
+        color: var(--golden-green);
+    }
+
+    .news-content p{
+        font-weight: 300;
+    }
+
+    .news-content h2{
+        margin-top: 16px;
+        margin-bottom: 8px;
+    }
+
+    .news-content h2, .news-content h2 *{        
+        font-family: "Abril Flatface";
+        font-size: 24px;
+        font-weight: bold;
+        color: white;
+    }
+    .news-content h3{
+        margin: 8px;
+    }
+
+    .news-content h3 *, .news-content h3{
+        color: var(--green-color);
+    }
+</style>
+<script>
+     // navbar scroll
+(() => {
+    const nav = document.querySelector('nav');
+
+    window.addEventListener('scroll', (e) => {
+        if (scrollY > 50) {
+            nav.classList.add("scrolled")
+        } else {
+            nav.classList.remove('scrolled')
+        }
+    })
+})();
+
+</script>
+
+</html>
