@@ -186,6 +186,29 @@ header .header-right {
     padding: 0;
 }
 
+.header-left .affiliates-container{
+    display: grid;
+    gap: 16px;
+    padding-top: 16px;
+}
+
+.header-left .affiliates{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.header-left .affiliates img{
+    max-width: 64px;
+    border-radius: 32px;
+}
+
+.header-left .affiliate{
+    font-size: x-small;
+}
+
 .header-right .img{
     position: relative;
 }
