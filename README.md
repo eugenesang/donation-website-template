@@ -15,4 +15,3 @@ Tech stack:
 - CSS
 - JavaScript
 - Nodemailer
-s
