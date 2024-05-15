@@ -3,6 +3,7 @@ const newsRoute = require('./routes/news');
 const hiwRoute = require('./routes/hiw');
 const donateRoute = require('./routes/donate');
 const feedbackRoute = require('./routes/feedback');
+const paystackRoute = require('./routes/paystack')
 
 function route(app){
     
@@ -14,6 +15,7 @@ function route(app){
     app.use('/hiw', hiwRoute);
     app.use('/donate', donateRoute);
     app.use('/feedback', feedbackRoute);
+    app.use('/paystack', paystackRoute);
     app.get('/success', (req, res)=>{
         res.render('success');
     })
